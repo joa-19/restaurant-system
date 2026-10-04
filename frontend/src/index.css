@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", "Impact", sans-serif;
+  --font-sans: "Manrope", system-ui, "Segoe UI", sans-serif;
+
+  --color-ink: #171310;
+  --color-ink-soft: #241c15;
+  --color-ink-line: #3a2f22;
+  --color-cream: #fbf6ec;
+  --color-paper: #ffffff;
+  --color-line: #eae1d0;
+  --color-ember: #f2a61e;
+  --color-ember-600: #d8900f;
+  --color-ember-100: #fcecc8;
+  --color-basil: #16a34a;
+  --color-basil-100: #dcfce7;
+}
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* hide scrollbar on horizontal chip rails while staying scrollable */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
